@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+
+{% load widget_tweaks %}
+
+{% block conteudo %}
+<div class="container">
+    <div class="card shadow mb-4">
+        <div class="card-header py-3">
+            <h2 class="m-0 font-weight-bold text-primary text-center">{{nome_pagina}}</h2>
+        </div>
+        <div class="card-body">
+            <div class="table-responsive">
+                <table class="table table-bordered">
+                    <thead>
+                        <th>Nome completo</th>
+                        <th>Email</th>
+                        <th>Data de nascimento</th>
+                        <th>Nota</th>
+                        <th>Comentário</th>
+                        <th>Dia e Horário de Registro do Comentário</th>
+                    </thead>
+
+                    <tbody>
+                        {% for variavel in total_visitantes %}
+                        <tr>
+                            <td>{{ variavel.nome_completo }}</td>
+                            <td>{{ variavel.email }}</td>
+                            <td>{{ variavel.data_nascimento }}</td>
+                            <td>{{ variavel.nota }}</td>
+                            <td>{{ variavel.comentario }}</td>
+                            <td>{{ variavel.horario_visita }}</td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock conteudo %}

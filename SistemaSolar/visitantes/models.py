@@ -1,20 +1,5 @@
 from django.db import models
 
-'''
-Exemplo de como usar RadioSelect em um ModelForm:
-
-from django import forms
-from .models import MeuModelo
-
-class MeuModeloForm(forms.ModelForm):
-    class Meta:
-        model = MeuModelo
-        fields = ['meu_campo']
-        widgets = {
-            'meu_campo': forms.RadioSelect,  # Define o widget como RadioSelect
-        }
-'''
-
 
 class Visitante(models.Model):
     nome_completo = models.CharField (verbose_name = 'Nome completo',

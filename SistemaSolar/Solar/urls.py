@@ -18,9 +18,11 @@ from django.contrib import admin
 from django.urls import path
 from usuarios.views import index
 from visitantes.views import registrar_visitante
+from dashboard.views import dashboard
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', index, name='index'),
-    path('visitante_form.html', registrar_visitante, name='registrar_visitante'),
+    path('registrar-visitante', registrar_visitante, name='registrar_visitante'),
+    path('dashboard', dashboard, name='dashboard'),
 ]

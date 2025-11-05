@@ -4,14 +4,10 @@
 
 {% block conteudo %}
 <div class="container">
-    <div class="d-sm-flex align-items-center justify-content-between mb-4">
-        <h1 class="h3 mb-0 text-gray-800">{{ nome_pagina }}</h1>
-    </div>
-
     <div class="card shadow mb-4">
         <div class="card-body">
             <h4 class="mb-3 text-primary">
-                Formulário para registro de novo visitante
+                Informe seus dados e deixe seu comentário:
             </h4>
 
             <p class="mb-5 ml=1">
@@ -25,7 +21,7 @@
                   {% for field in form %}
                     <div class="form-group col-md-12">
                       <label>{{ field.label }}</label>
-                      {% if field.field.required %} * {% endif %}
+                      {% if field.field.required %} * {% endif %}           
                       {% render_field field placeholder=field.label class="form-control" %}
                     </div>
                   {% endfor %}
